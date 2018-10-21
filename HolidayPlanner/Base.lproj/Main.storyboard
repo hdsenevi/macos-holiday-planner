@@ -701,10 +701,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Holiday Split View Controller-->
         <scene sceneID="twR-Z2-AyX">
             <objects>
-                <splitViewController id="4Ef-Tk-Uhs" sceneMemberID="viewController">
+                <splitViewController id="4Ef-Tk-Uhs" customClass="HolidaySplitViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="k52-Cs-4Zf"/>
                         <splitViewItem id="NSy-zm-c3s"/>
@@ -717,12 +717,19 @@
                         </connections>
                     </splitView>
                     <connections>
+                        <outlet property="holidayArrayController" destination="q6D-Az-L0v" id="fv2-Cc-jHs"/>
                         <outlet property="splitView" destination="pnt-1o-uXe" id="M3p-Vo-QAL"/>
                         <segue destination="rns-Oj-aJf" kind="relationship" relationship="splitItems" id="X67-GN-RmW"/>
                         <segue destination="c2A-Jz-ca6" kind="relationship" relationship="splitItems" id="snO-cW-4mg"/>
                     </connections>
                 </splitViewController>
                 <customObject id="sl1-Zq-ILl" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController mode="entity" entityName="Holiday" automaticallyPreparesContent="YES" id="q6D-Az-L0v">
+                    <connections>
+                        <binding destination="4Ef-Tk-Uhs" name="managedObjectContext" keyPath="self.managedObjectContext" id="zhB-sN-7bd"/>
+                    </connections>
+                </arrayController>
+                <userDefaultsController representsSharedInstance="YES" id="cJc-8G-bwz"/>
             </objects>
             <point key="canvasLocation" x="75" y="707"/>
         </scene>
@@ -739,10 +746,10 @@
             </objects>
             <point key="canvasLocation" x="711" y="574"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--Holiday Tab View Controller-->
         <scene sceneID="pBe-AU-NDd">
             <objects>
-                <tabViewController id="c2A-Jz-ca6" sceneMemberID="viewController">
+                <tabViewController id="c2A-Jz-ca6" customClass="HolidayTabViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="aLY-OK-6jZ"/>
                         <tabViewItem identifier="" id="QGo-hH-Juj"/>
@@ -794,6 +801,13 @@
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <binding destination="WFT-a5-VQU" name="value" keyPath="selection.name" id="7ht-kh-jnJ">
+                                                        <dictionary key="options">
+                                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <visibilityPriorities>
@@ -828,6 +842,7 @@
                                                 </datePickerCell>
                                                 <connections>
                                                     <action selector="dateChanged:" target="KrG-7R-4bJ" id="y9a-Bf-Qlc"/>
+                                                    <binding destination="WFT-a5-VQU" name="value" keyPath="selection.startDate" id="p6s-Ko-lH9"/>
                                                 </connections>
                                             </datePicker>
                                         </subviews>
@@ -863,6 +878,7 @@
                                                 </datePickerCell>
                                                 <connections>
                                                     <action selector="dateChanged:" target="KrG-7R-4bJ" id="uAx-DK-4x2"/>
+                                                    <binding destination="WFT-a5-VQU" name="value" keyPath="selection.endDate" id="LRN-zw-fcL"/>
                                                 </connections>
                                             </datePicker>
                                         </subviews>
@@ -927,6 +943,13 @@
                                                         </items>
                                                     </menu>
                                                 </popUpButtonCell>
+                                                <connections>
+                                                    <binding destination="WFT-a5-VQU" name="selectedValue" keyPath="selection.tripType" id="GLC-Cz-OZQ">
+                                                        <dictionary key="options">
+                                                            <string key="NSNullPlaceholder">None Selected</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </popUpButton>
                                         </subviews>
                                         <visibilityPriorities>
@@ -944,6 +967,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <binding destination="WFT-a5-VQU" name="value" keyPath="selection.archived" id="MYn-mM-9uX"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TcJ-9b-Ryn">
                                         <rect key="frame" x="97" y="-7" width="94" height="32"/>
@@ -990,11 +1016,13 @@
                     </view>
                     <connections>
                         <outlet property="endDatePicker" destination="Gse-uc-QU8" id="D1I-B2-JNR"/>
+                        <outlet property="objectController" destination="WFT-a5-VQU" id="KxM-QG-UfF"/>
                         <outlet property="startDatePicker" destination="urB-HF-5cx" id="clp-Pf-ygf"/>
                         <outlet property="totalTimeLabel" destination="5Mt-bq-6S3" id="ADh-gs-SrM"/>
                     </connections>
                 </viewController>
                 <customObject id="kZX-zO-VsP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <objectController id="WFT-a5-VQU"/>
             </objects>
             <point key="canvasLocation" x="1378" y="848"/>
         </scene>
@@ -1036,8 +1064,12 @@
                             <constraint firstAttribute="bottom" secondItem="1Rz-M2-u22" secondAttribute="bottom" constant="20" id="kOx-ka-MbP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="objectController" destination="p9E-1R-aNU" id="6sa-3I-pyO"/>
+                    </connections>
                 </viewController>
                 <customObject id="JE8-DT-cvM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <objectController id="p9E-1R-aNU"/>
             </objects>
             <point key="canvasLocation" x="1378" y="1220"/>
         </scene>

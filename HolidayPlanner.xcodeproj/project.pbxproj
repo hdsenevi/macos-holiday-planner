@@ -15,6 +15,8 @@
 		F2F63F4A2179DA6A000E7F2B /* HolidayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F63F492179DA6A000E7F2B /* HolidayListViewController.swift */; };
 		F2F63F4C2179DAAB000E7F2B /* HolidayDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F63F4B2179DAAB000E7F2B /* HolidayDetailsViewController.swift */; };
 		F2F63F4E2179DABA000E7F2B /* HolidayNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F63F4D2179DABA000E7F2B /* HolidayNotesViewController.swift */; };
+		F2F63F50217C5897000E7F2B /* HolidaySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F63F4F217C5897000E7F2B /* HolidaySplitViewController.swift */; };
+		F2F63F52217C5BEC000E7F2B /* HolidayTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F63F51217C5BEC000E7F2B /* HolidayTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		F2F63F492179DA6A000E7F2B /* HolidayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayListViewController.swift; sourceTree = "<group>"; };
 		F2F63F4B2179DAAB000E7F2B /* HolidayDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayDetailsViewController.swift; sourceTree = "<group>"; };
 		F2F63F4D2179DABA000E7F2B /* HolidayNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayNotesViewController.swift; sourceTree = "<group>"; };
+		F2F63F4F217C5897000E7F2B /* HolidaySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaySplitViewController.swift; sourceTree = "<group>"; };
+		F2F63F51217C5BEC000E7F2B /* HolidayTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,15 +66,17 @@
 			isa = PBXGroup;
 			children = (
 				F2F63F352179D5FB000E7F2B /* AppDelegate.swift */,
-				F2F63F372179D5FB000E7F2B /* ViewController.swift */,
 				F2F63F3C2179D5FE000E7F2B /* Assets.xcassets */,
-				F2F63F3E2179D5FE000E7F2B /* Main.storyboard */,
 				F2F63F4B2179DAAB000E7F2B /* HolidayDetailsViewController.swift */,
+				F2F63F492179DA6A000E7F2B /* HolidayListViewController.swift */,
 				F2F63F4D2179DABA000E7F2B /* HolidayNotesViewController.swift */,
-				F2F63F412179D5FE000E7F2B /* Info.plist */,
 				F2F63F422179D5FE000E7F2B /* HolidayPlanner.entitlements */,
 				F2F63F392179D5FB000E7F2B /* HolidayPlanner.xcdatamodeld */,
-				F2F63F492179DA6A000E7F2B /* HolidayListViewController.swift */,
+				F2F63F4F217C5897000E7F2B /* HolidaySplitViewController.swift */,
+				F2F63F51217C5BEC000E7F2B /* HolidayTabViewController.swift */,
+				F2F63F412179D5FE000E7F2B /* Info.plist */,
+				F2F63F3E2179D5FE000E7F2B /* Main.storyboard */,
+				F2F63F372179D5FB000E7F2B /* ViewController.swift */,
 			);
 			path = HolidayPlanner;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F63F382179D5FB000E7F2B /* ViewController.swift in Sources */,
+				F2F63F52217C5BEC000E7F2B /* HolidayTabViewController.swift in Sources */,
+				F2F63F50217C5897000E7F2B /* HolidaySplitViewController.swift in Sources */,
 				F2F63F4C2179DAAB000E7F2B /* HolidayDetailsViewController.swift in Sources */,
 				F2F63F4E2179DABA000E7F2B /* HolidayNotesViewController.swift in Sources */,
 				F2F63F362179D5FB000E7F2B /* AppDelegate.swift in Sources */,

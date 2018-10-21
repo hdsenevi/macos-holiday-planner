@@ -30,6 +30,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } catch {
             fatalError("Failed to fetch holidays: \(error)")
         }
+        
+        let splitViewController = NSApplication.shared.windows[0].contentViewController as! HolidaySplitViewController
+        splitViewController.setInitialHoliday()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
