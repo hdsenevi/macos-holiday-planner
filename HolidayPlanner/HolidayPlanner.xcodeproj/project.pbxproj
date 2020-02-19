@@ -12,6 +12,9 @@
 		8B4D011923FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D011723FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld */; };
 		8B4D011B23FD5B7800FC0F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D011A23FD5B7800FC0F69 /* Assets.xcassets */; };
 		8B4D011E23FD5B7800FC0F69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D011C23FD5B7800FC0F69 /* Main.storyboard */; };
+		8B4D012723FD5C4200FC0F69 /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D012623FD5C4200FC0F69 /* TripListViewController.swift */; };
+		8B4D012A23FD5C8E00FC0F69 /* TripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */; };
+		8B4D012D23FD5C9E00FC0F69 /* TripNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		8B4D011D23FD5B7800FC0F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B4D011F23FD5B7800FC0F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B4D012023FD5B7800FC0F69 /* HolidayPlanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HolidayPlanner.entitlements; sourceTree = "<group>"; };
+		8B4D012623FD5C4200FC0F69 /* TripListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
+		8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsViewController.swift; sourceTree = "<group>"; };
+		8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +65,12 @@
 				8B4D011523FD5B7700FC0F69 /* ViewController.swift */,
 				8B4D011A23FD5B7800FC0F69 /* Assets.xcassets */,
 				8B4D011C23FD5B7800FC0F69 /* Main.storyboard */,
+				8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */,
+				8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */,
 				8B4D011F23FD5B7800FC0F69 /* Info.plist */,
 				8B4D012023FD5B7800FC0F69 /* HolidayPlanner.entitlements */,
 				8B4D011723FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld */,
+				8B4D012623FD5C4200FC0F69 /* TripListViewController.swift */,
 			);
 			path = HolidayPlanner;
 			sourceTree = "<group>";
@@ -136,7 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4D012A23FD5C8E00FC0F69 /* TripDetailsViewController.swift in Sources */,
 				8B4D011623FD5B7700FC0F69 /* ViewController.swift in Sources */,
+				8B4D012723FD5C4200FC0F69 /* TripListViewController.swift in Sources */,
+				8B4D012D23FD5C9E00FC0F69 /* TripNoteViewController.swift in Sources */,
 				8B4D011423FD5B7700FC0F69 /* AppDelegate.swift in Sources */,
 				8B4D011923FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld in Sources */,
 			);

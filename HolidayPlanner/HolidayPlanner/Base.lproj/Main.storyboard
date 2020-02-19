@@ -726,10 +726,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="721"/>
         </scene>
-        <!--View Controller-->
+        <!--Trip List View Controller-->
         <scene sceneID="RC0-ab-Uyz">
             <objects>
-                <viewController id="K5I-h1-QIh" sceneMemberID="viewController">
+                <viewController id="K5I-h1-QIh" customClass="TripListViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="IFU-Qv-8u7">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -765,10 +765,10 @@
             </objects>
             <point key="canvasLocation" x="765" y="946"/>
         </scene>
-        <!--View Controller-->
+        <!--Details-->
         <scene sceneID="qxz-SX-FnC">
             <objects>
-                <viewController id="BL0-ZQ-GAV" sceneMemberID="viewController">
+                <viewController title="Details" id="BL0-ZQ-GAV" customClass="TripDetailsViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="btX-C7-6qX">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -778,10 +778,10 @@
             </objects>
             <point key="canvasLocation" x="1435" y="760"/>
         </scene>
-        <!--View Controller-->
+        <!--Notes-->
         <scene sceneID="k1H-9E-zby">
             <objects>
-                <viewController id="MCy-Ow-6kH" sceneMemberID="viewController">
+                <viewController title="Notes" id="MCy-Ow-6kH" customClass="TripNoteViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="yVF-s1-4PC">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
