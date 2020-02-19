@@ -772,6 +772,12 @@
                     <view key="view" id="btX-C7-6qX">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Acc-oN-HT4">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </stackView>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="4r6-b7-QO1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
