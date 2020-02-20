@@ -65,12 +65,12 @@
 				8B4D011523FD5B7700FC0F69 /* ViewController.swift */,
 				8B4D011A23FD5B7800FC0F69 /* Assets.xcassets */,
 				8B4D011C23FD5B7800FC0F69 /* Main.storyboard */,
-				8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */,
-				8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */,
 				8B4D011F23FD5B7800FC0F69 /* Info.plist */,
 				8B4D012023FD5B7800FC0F69 /* HolidayPlanner.entitlements */,
 				8B4D011723FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld */,
 				8B4D012623FD5C4200FC0F69 /* TripListViewController.swift */,
+				8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */,
+				8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */,
 			);
 			path = HolidayPlanner;
 			sourceTree = "<group>";
