@@ -15,6 +15,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        do {
+            let context = persistentContainer.viewContext
+            let holidayFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Holiday")
+            let existingHolidays = try context.fetch(holidayFetchRequest) as! [Holiday]
+            
+            if (existingHolidays.count == 0) {
+                let holiday = NSEntityDescription.insertNewObject(forEntityName: "Holiday", into: context) as! Holiday
+                holiday.name = "Sample holiday"
+                holiday.startDate = NSDate() as Date
+                holiday.endDate = NSDate() as Date
+            }
+        } catch {
+            fatalError("Failed to fetch holidays: \(error)")
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
