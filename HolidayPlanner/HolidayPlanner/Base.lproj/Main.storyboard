@@ -1044,6 +1044,13 @@
                                             <size key="minSize" width="410" height="260"/>
                                             <size key="maxSize" width="410" height="10000000"/>
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <binding destination="YPx-yI-dis" name="attributedString" keyPath="selection.notes" id="sD7-gt-aCI">
+                                                    <dictionary key="options">
+                                                        <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
                                         </textView>
                                     </subviews>
                                 </clipView>
