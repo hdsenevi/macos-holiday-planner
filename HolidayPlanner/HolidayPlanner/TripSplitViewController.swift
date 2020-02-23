@@ -21,6 +21,7 @@ class TripSplitViewController: NSSplitViewController {
     
     func setInitialTrip() {
         do {
+            tripArrayController.managedObjectContext = managedObjectContext
             try tripArrayController.fetch(with: nil, merge: false)
             
             if (tripArrayController.selectedObjects != nil) {
