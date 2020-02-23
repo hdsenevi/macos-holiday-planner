@@ -10,6 +10,14 @@ import Cocoa
 
 class TripNoteViewController: NSViewController {
 
+    @IBOutlet var objectController: NSObjectController!
+    
+    var holiday: Holiday! {
+        didSet {
+            objectController.content = holiday
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

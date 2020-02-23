@@ -11,10 +11,10 @@
     </entity>
     <entity name="Holiday" representedClassName="Holiday" syncable="YES" codeGenerationType="class">
         <attribute name="archived" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="endDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tripType" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activity" inverseName="holiday" inverseEntity="Activity" syncable="YES"/>
         <relationship name="photos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Photo" inverseName="holiday" inverseEntity="Photo" syncable="YES"/>
@@ -27,7 +27,7 @@
     </entity>
     <elements>
         <element name="Activity" positionX="-54" positionY="36" width="128" height="150"/>
-        <element name="Photo" positionX="-36" positionY="45" width="128" height="105"/>
         <element name="Holiday" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Photo" positionX="-36" positionY="45" width="128" height="105"/>
     </elements>
 </model>

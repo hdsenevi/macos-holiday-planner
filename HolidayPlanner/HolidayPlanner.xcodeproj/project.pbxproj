@@ -15,6 +15,8 @@
 		8B4D012723FD5C4200FC0F69 /* TripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D012623FD5C4200FC0F69 /* TripListViewController.swift */; };
 		8B4D012A23FD5C8E00FC0F69 /* TripDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */; };
 		8B4D012D23FD5C9E00FC0F69 /* TripNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */; };
+		8B622C1F240217410045FBFD /* TripSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B622C1E240217410045FBFD /* TripSplitViewController.swift */; };
+		8B622C212402179A0045FBFD /* TripTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B622C20240217990045FBFD /* TripTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		8B4D012623FD5C4200FC0F69 /* TripListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewController.swift; sourceTree = "<group>"; };
 		8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsViewController.swift; sourceTree = "<group>"; };
 		8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteViewController.swift; sourceTree = "<group>"; };
+		8B622C1E240217410045FBFD /* TripSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSplitViewController.swift; sourceTree = "<group>"; };
+		8B622C20240217990045FBFD /* TripTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +72,11 @@
 				8B4D011F23FD5B7800FC0F69 /* Info.plist */,
 				8B4D012023FD5B7800FC0F69 /* HolidayPlanner.entitlements */,
 				8B4D011723FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld */,
+				8B622C1E240217410045FBFD /* TripSplitViewController.swift */,
 				8B4D012623FD5C4200FC0F69 /* TripListViewController.swift */,
 				8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */,
 				8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */,
+				8B622C20240217990045FBFD /* TripTabViewController.swift */,
 			);
 			path = HolidayPlanner;
 			sourceTree = "<group>";
@@ -146,10 +152,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B4D012A23FD5C8E00FC0F69 /* TripDetailsViewController.swift in Sources */,
+				8B622C212402179A0045FBFD /* TripTabViewController.swift in Sources */,
 				8B4D011623FD5B7700FC0F69 /* ViewController.swift in Sources */,
 				8B4D012723FD5C4200FC0F69 /* TripListViewController.swift in Sources */,
 				8B4D012D23FD5C9E00FC0F69 /* TripNoteViewController.swift in Sources */,
 				8B4D011423FD5B7700FC0F69 /* AppDelegate.swift in Sources */,
+				8B622C1F240217410045FBFD /* TripSplitViewController.swift in Sources */,
 				8B4D011923FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

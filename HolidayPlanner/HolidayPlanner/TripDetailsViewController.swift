@@ -14,6 +14,8 @@ class TripDetailsViewController: NSViewController {
     @IBOutlet weak var endDatePicker: NSDatePicker!
     @IBOutlet weak var totalTimeLabel: NSTextField!
     
+    @IBOutlet var objectController: NSObjectController!
+    
     lazy var deteComponentsFormatter: DateComponentsFormatter = {
         let dateComponentsFormatter = DateComponentsFormatter()
         
@@ -22,6 +24,12 @@ class TripDetailsViewController: NSViewController {
         
         return dateComponentsFormatter
     }()
+    
+    var holiday: Holiday! {
+        didSet {
+            objectController.content = holiday
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

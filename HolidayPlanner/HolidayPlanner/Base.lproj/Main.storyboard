@@ -701,10 +701,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Trip Split View Controller-->
         <scene sceneID="lhT-Wh-OeN">
             <objects>
-                <splitViewController id="xpZ-vt-dlN" sceneMemberID="viewController">
+                <splitViewController id="xpZ-vt-dlN" customClass="TripSplitViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="GQM-rc-yLD"/>
                         <splitViewItem id="9wU-vO-9NL"/>
@@ -718,11 +718,14 @@
                     </splitView>
                     <connections>
                         <outlet property="splitView" destination="nvj-TS-VY7" id="7Kh-rt-7a5"/>
+                        <outlet property="tripArrayController" destination="ots-Jv-ZOg" id="mUv-sz-KFT"/>
                         <segue destination="K5I-h1-QIh" kind="relationship" relationship="splitItems" id="KbV-Vk-3sd"/>
                         <segue destination="DCd-Ha-q2O" kind="relationship" relationship="splitItems" id="8hK-8e-a1y"/>
                     </connections>
                 </splitViewController>
                 <customObject id="0L6-1L-NbH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController mode="entity" entityName="Holiday" automaticallyPreparesContent="YES" id="ots-Jv-ZOg"/>
+                <userDefaultsController representsSharedInstance="YES" id="7Wf-uU-Pnt"/>
             </objects>
             <point key="canvasLocation" x="75" y="721"/>
         </scene>
@@ -739,10 +742,10 @@
             </objects>
             <point key="canvasLocation" x="758" y="512"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--Trip Tab View Controller-->
         <scene sceneID="GEX-N8-VE6">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" id="DCd-Ha-q2O" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" id="DCd-Ha-q2O" customClass="TripTabViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="zX2-az-QmK"/>
                         <tabViewItem identifier="" id="gMF-rF-CF1"/>
@@ -794,6 +797,13 @@
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
+                                                <connections>
+                                                    <binding destination="AnA-RF-L9o" name="value" keyPath="selection.name" id="m7c-CF-7NR">
+                                                        <dictionary key="options">
+                                                            <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <visibilityPriorities>
@@ -828,6 +838,7 @@
                                                 </datePickerCell>
                                                 <connections>
                                                     <action selector="dateChanged:" target="BL0-ZQ-GAV" id="z0v-yz-hfx"/>
+                                                    <binding destination="AnA-RF-L9o" name="value" keyPath="selection.startDate" id="gaz-yf-1BE"/>
                                                 </connections>
                                             </datePicker>
                                         </subviews>
@@ -863,6 +874,7 @@
                                                 </datePickerCell>
                                                 <connections>
                                                     <action selector="dateChanged:" target="BL0-ZQ-GAV" id="Fxd-75-i8X"/>
+                                                    <binding destination="AnA-RF-L9o" name="value" keyPath="selection.endDate" id="sXV-V8-gQL"/>
                                                 </connections>
                                             </datePicker>
                                         </subviews>
@@ -927,6 +939,13 @@
                                                         </items>
                                                     </menu>
                                                 </popUpButtonCell>
+                                                <connections>
+                                                    <binding destination="AnA-RF-L9o" name="selectedValue" keyPath="selection.tripType" id="9bb-Eg-VWO">
+                                                        <dictionary key="options">
+                                                            <string key="NSNullPlaceholder">None Selected</string>
+                                                        </dictionary>
+                                                    </binding>
+                                                </connections>
                                             </popUpButton>
                                         </subviews>
                                         <visibilityPriorities>
@@ -944,6 +963,9 @@
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <binding destination="AnA-RF-L9o" name="value" keyPath="selection.archived" id="0XS-NV-X8h"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dmL-b8-POM">
                                         <rect key="frame" x="75" y="-7" width="94" height="32"/>
@@ -990,11 +1012,13 @@
                     </view>
                     <connections>
                         <outlet property="endDatePicker" destination="xk2-VG-wbe" id="MNH-nb-cia"/>
+                        <outlet property="objectController" destination="AnA-RF-L9o" id="15d-pb-pyS"/>
                         <outlet property="startDatePicker" destination="x0b-Cx-k4o" id="Anv-ZA-bb5"/>
                         <outlet property="totalTimeLabel" destination="brf-9H-pWE" id="SAx-aq-82l"/>
                     </connections>
                 </viewController>
                 <customObject id="4r6-b7-QO1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <objectController id="AnA-RF-L9o"/>
             </objects>
             <point key="canvasLocation" x="1435" y="760"/>
         </scene>
@@ -1036,8 +1060,12 @@
                             <constraint firstItem="a1V-Wx-Oey" firstAttribute="leading" secondItem="yVF-s1-4PC" secondAttribute="leading" constant="20" id="SdJ-I7-fea"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="objectController" destination="YPx-yI-dis" id="bYL-FU-oRc"/>
+                    </connections>
                 </viewController>
                 <customObject id="Edg-sT-5yK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <objectController id="YPx-yI-dis"/>
             </objects>
             <point key="canvasLocation" x="1435" y="1132"/>
         </scene>
