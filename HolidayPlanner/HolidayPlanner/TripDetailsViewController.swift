@@ -15,6 +15,7 @@ class TripDetailsViewController: NSViewController {
     @IBOutlet weak var totalTimeLabel: NSTextField!
     
     @IBOutlet var objectController: NSObjectController!
+    @IBOutlet var activitiesArrayController: NSArrayController!
     
     lazy var deteComponentsFormatter: DateComponentsFormatter = {
         let dateComponentsFormatter = DateComponentsFormatter()
@@ -28,6 +29,7 @@ class TripDetailsViewController: NSViewController {
     var holiday: Holiday! {
         didSet {
             objectController.content = holiday
+            activitiesArrayController.content = holiday.activities
         }
     }
     
@@ -40,7 +42,6 @@ class TripDetailsViewController: NSViewController {
         dateChanged(self.startDatePicker)
     }
     
-    
     @IBAction func dateChanged(_ sender: NSDatePicker) {
         let cal = Calendar(identifier: .gregorian)
         let midnightStartDate = cal.startOfDay(for: self.startDatePicker.dateValue)
@@ -51,5 +52,21 @@ class TripDetailsViewController: NSViewController {
         let tripTime = midnightEndDate.timeIntervalSince(midnightStartDate)
         
         self.totalTimeLabel.stringValue = self.deteComponentsFormatter.string(from: tripTime)!
+    }
+    
+    @IBAction func addActivity(_ sender: NSButton) {
+        let managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let activity = NSEntityDescription.insertNewObject(forEntityName: "Activity", into: managedObjectContext) as! Activity
+        activity.holiday = holiday
+        activitiesArrayController.addObject(activity)
+    }
+    
+    @IBAction func removeActivity(_ sender: NSButton) {
+        let managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        for activity in activitiesArrayController.selectedObjects {
+            managedObjectContext.delete(activity as! Activity)
+        }
+        
+        activitiesArrayController.remove(contentsOf: activitiesArrayController.selectedObjects)
     }
 }
