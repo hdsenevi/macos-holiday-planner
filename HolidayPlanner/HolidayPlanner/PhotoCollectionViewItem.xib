@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PhotoCollectionViewItem" customModule="HolidayPlanner" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="PK2-cU-xhu" id="5MG-Eh-YpP"/>
+                <outlet property="textField" destination="A5m-BA-q17" id="uIA-2m-hgh"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="264" height="262"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-cU-xhu">
+                    <rect key="frame" x="12" y="41" width="240" height="209"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="YK5-LC-lPd"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A5m-BA-q17">
+                    <rect key="frame" x="18" y="12" width="228" height="17"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Label" id="ZfH-EZ-IfK">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="PK2-cU-xhu" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="9Ec-1W-zaF"/>
+                <constraint firstItem="A5m-BA-q17" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="AWJ-lP-F7L"/>
+                <constraint firstItem="A5m-BA-q17" firstAttribute="top" secondItem="PK2-cU-xhu" secondAttribute="bottom" constant="12" id="M1o-BM-xXK"/>
+                <constraint firstAttribute="trailing" secondItem="PK2-cU-xhu" secondAttribute="trailing" constant="12" id="Ss6-hg-xnz"/>
+                <constraint firstItem="PK2-cU-xhu" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="Wqd-nE-eFr"/>
+                <constraint firstAttribute="trailing" secondItem="A5m-BA-q17" secondAttribute="trailing" constant="20" id="v0Q-jw-ySX"/>
+                <constraint firstAttribute="bottom" secondItem="A5m-BA-q17" secondAttribute="bottom" constant="12" id="vvy-bp-6cf"/>
+            </constraints>
+            <point key="canvasLocation" x="32" y="149"/>
+        </customView>
+    </objects>
+</document>

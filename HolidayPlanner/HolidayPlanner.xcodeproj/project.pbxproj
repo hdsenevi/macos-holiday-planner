@@ -17,6 +17,10 @@
 		8B4D012D23FD5C9E00FC0F69 /* TripNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */; };
 		8B622C1F240217410045FBFD /* TripSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B622C1E240217410045FBFD /* TripSplitViewController.swift */; };
 		8B622C212402179A0045FBFD /* TripTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B622C20240217990045FBFD /* TripTabViewController.swift */; };
+		8B875AE524045D09000E5798 /* TripPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B875AE424045D09000E5798 /* TripPhotosViewController.swift */; };
+		8B875AE824045FDB000E5798 /* PhotoCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B875AE624045FDB000E5798 /* PhotoCollectionViewItem.swift */; };
+		8B875AE924045FDB000E5798 /* PhotoCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B875AE724045FDB000E5798 /* PhotoCollectionViewItem.xib */; };
+		8B875AEB24046B6C000E5798 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B875AEA24046B6C000E5798 /* AddPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,10 @@
 		8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripNoteViewController.swift; sourceTree = "<group>"; };
 		8B622C1E240217410045FBFD /* TripSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripSplitViewController.swift; sourceTree = "<group>"; };
 		8B622C20240217990045FBFD /* TripTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTabViewController.swift; sourceTree = "<group>"; };
+		8B875AE424045D09000E5798 /* TripPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPhotosViewController.swift; sourceTree = "<group>"; };
+		8B875AE624045FDB000E5798 /* PhotoCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewItem.swift; sourceTree = "<group>"; };
+		8B875AE724045FDB000E5798 /* PhotoCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewItem.xib; sourceTree = "<group>"; };
+		8B875AEA24046B6C000E5798 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 				8B4D011523FD5B7700FC0F69 /* ViewController.swift */,
 				8B4D011A23FD5B7800FC0F69 /* Assets.xcassets */,
 				8B4D011C23FD5B7800FC0F69 /* Main.storyboard */,
+				8B875AE724045FDB000E5798 /* PhotoCollectionViewItem.xib */,
 				8B4D011F23FD5B7800FC0F69 /* Info.plist */,
 				8B4D012023FD5B7800FC0F69 /* HolidayPlanner.entitlements */,
 				8B4D011723FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld */,
@@ -77,6 +86,9 @@
 				8B4D012C23FD5C9E00FC0F69 /* TripNoteViewController.swift */,
 				8B4D012823FD5C8E00FC0F69 /* TripDetailsViewController.swift */,
 				8B622C20240217990045FBFD /* TripTabViewController.swift */,
+				8B875AE424045D09000E5798 /* TripPhotosViewController.swift */,
+				8B875AE624045FDB000E5798 /* PhotoCollectionViewItem.swift */,
+				8B875AEA24046B6C000E5798 /* AddPhotoViewController.swift */,
 			);
 			path = HolidayPlanner;
 			sourceTree = "<group>";
@@ -141,6 +153,7 @@
 			files = (
 				8B4D011B23FD5B7800FC0F69 /* Assets.xcassets in Resources */,
 				8B4D011E23FD5B7800FC0F69 /* Main.storyboard in Resources */,
+				8B875AE924045FDB000E5798 /* PhotoCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,10 +167,13 @@
 				8B4D012A23FD5C8E00FC0F69 /* TripDetailsViewController.swift in Sources */,
 				8B622C212402179A0045FBFD /* TripTabViewController.swift in Sources */,
 				8B4D011623FD5B7700FC0F69 /* ViewController.swift in Sources */,
+				8B875AE524045D09000E5798 /* TripPhotosViewController.swift in Sources */,
 				8B4D012723FD5C4200FC0F69 /* TripListViewController.swift in Sources */,
 				8B4D012D23FD5C9E00FC0F69 /* TripNoteViewController.swift in Sources */,
+				8B875AEB24046B6C000E5798 /* AddPhotoViewController.swift in Sources */,
 				8B4D011423FD5B7700FC0F69 /* AppDelegate.swift in Sources */,
 				8B622C1F240217410045FBFD /* TripSplitViewController.swift in Sources */,
+				8B875AE824045FDB000E5798 /* PhotoCollectionViewItem.swift in Sources */,
 				8B4D011923FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

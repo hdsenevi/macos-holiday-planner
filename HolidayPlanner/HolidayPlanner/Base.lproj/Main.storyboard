@@ -973,6 +973,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <segue destination="kDa-uF-8oK" kind="modal" identifier="phtoSegue" id="SUw-TM-P8C"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1321,6 +1324,169 @@
                 <arrayController id="sBP-ZG-3hy"/>
             </objects>
             <point key="canvasLocation" x="1434.5" y="844.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="Fc9-Yi-s3B">
+            <objects>
+                <windowController id="kDa-uF-8oK" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="kCh-TU-g7e">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="1974" y="283" width="480" height="270"/>
+                        <rect key="screenRect" x="1680" y="-30" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="kDa-uF-8oK" id="UmG-7u-lzA"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="WJ6-ks-Ndp" kind="relationship" relationship="window.shadowedContentViewController" id="2um-AE-5SW"/>
+                    </connections>
+                </windowController>
+                <customObject id="GIF-rH-2Sw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2126" y="831"/>
+        </scene>
+        <!--Trip Photos View Controller-->
+        <scene sceneID="8Qq-7w-mQj">
+            <objects>
+                <viewController id="WJ6-ks-Ndp" customClass="TripPhotosViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ImH-KK-nuH">
+                        <rect key="frame" x="0.0" y="0.0" width="631" height="408"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9GH-mw-TP2">
+                                <rect key="frame" x="570" y="5" width="47" height="32"/>
+                                <buttonCell key="cell" type="push" title="-" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="4LY-N0-C9c">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="removePhotos:" target="WJ6-ks-Ndp" id="HaI-Wz-Dv8"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wiz-wW-rTd">
+                                <rect key="frame" x="521" y="5" width="49" height="32"/>
+                                <buttonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XI2-es-tNG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="ZO2-Ul-vr2" kind="modal" identifier="addPhotoSegue" id="tyN-pm-L1A"/>
+                                </connections>
+                            </button>
+                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqR-sD-7sz">
+                                <rect key="frame" x="20" y="53" width="591" height="335"/>
+                                <clipView key="contentView" id="Aym-d1-Jjd">
+                                    <rect key="frame" x="1" y="1" width="589" height="333"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="Hct-mY-bZt">
+                                            <rect key="frame" x="0.0" y="0.0" width="589" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="QZ0-ub-62W">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="WJ6-ks-Ndp" id="PwX-Wp-hgd"/>
+                                                <outlet property="delegate" destination="WJ6-ks-Ndp" id="Uey-7o-Ib8"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="uz9-Fd-8a1">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="tZV-oY-HLi">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LqR-sD-7sz" secondAttribute="trailing" constant="20" id="BYN-vu-orM"/>
+                            <constraint firstAttribute="bottom" secondItem="9GH-mw-TP2" secondAttribute="bottom" constant="12" id="IHi-pa-LDJ"/>
+                            <constraint firstItem="9GH-mw-TP2" firstAttribute="leading" secondItem="wiz-wW-rTd" secondAttribute="trailing" constant="12" id="WAE-xm-KKT"/>
+                            <constraint firstItem="9GH-mw-TP2" firstAttribute="top" secondItem="LqR-sD-7sz" secondAttribute="bottom" constant="20" id="cz0-NZ-8Oo"/>
+                            <constraint firstItem="LqR-sD-7sz" firstAttribute="top" secondItem="ImH-KK-nuH" secondAttribute="top" constant="20" id="ekY-Fd-SO4"/>
+                            <constraint firstAttribute="bottom" secondItem="wiz-wW-rTd" secondAttribute="bottom" constant="12" id="lRd-Xq-zyj"/>
+                            <constraint firstAttribute="trailing" secondItem="9GH-mw-TP2" secondAttribute="trailing" constant="20" id="nAF-tY-GG8"/>
+                            <constraint firstItem="LqR-sD-7sz" firstAttribute="leading" secondItem="ImH-KK-nuH" secondAttribute="leading" constant="20" id="u4T-xY-osJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Hct-mY-bZt" id="dxy-Pa-Y7W"/>
+                    </connections>
+                </viewController>
+                <customObject id="lNv-mi-JbA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2866.5" y="814"/>
+        </scene>
+        <!--Add Photo View Controller-->
+        <scene sceneID="wpx-4P-XFl">
+            <objects>
+                <viewController id="ZO2-Ul-vr2" customClass="AddPhotoViewController" customModule="HolidayPlanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="MLB-V2-Vn5">
+                        <rect key="frame" x="0.0" y="0.0" width="538" height="426"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fn8-QY-IWG">
+                                <rect key="frame" x="459" y="13" width="65" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tcg-wv-bbN">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addImage:" target="ZO2-Ul-vr2" id="m6Q-in-TOP"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="waP-Qf-iP0">
+                                <rect key="frame" x="20" y="49" width="498" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Notes" drawsBackground="YES" id="g4s-qu-bk5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aPW-Gt-DUB">
+                                <rect key="frame" x="20" y="81" width="498" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="55S-vm-uod">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ttO-yf-Fhh">
+                                <rect key="frame" x="17" y="108" width="504" height="301"/>
+                                <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="426-Ee-xhR"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ttO-yf-Fhh" secondAttribute="trailing" constant="20" id="0uV-QZ-bLj"/>
+                            <constraint firstItem="aPW-Gt-DUB" firstAttribute="top" secondItem="ttO-yf-Fhh" secondAttribute="bottom" constant="8" symbolic="YES" id="2cY-q8-azS"/>
+                            <constraint firstItem="ttO-yf-Fhh" firstAttribute="top" secondItem="MLB-V2-Vn5" secondAttribute="top" constant="20" id="7UT-F8-sT8"/>
+                            <constraint firstAttribute="trailing" secondItem="Fn8-QY-IWG" secondAttribute="trailing" constant="20" id="Ffu-cK-mIU"/>
+                            <constraint firstAttribute="trailing" secondItem="waP-Qf-iP0" secondAttribute="trailing" constant="20" id="GuE-mv-jVe"/>
+                            <constraint firstItem="waP-Qf-iP0" firstAttribute="top" secondItem="aPW-Gt-DUB" secondAttribute="bottom" constant="10" symbolic="YES" id="HnP-qY-WSf"/>
+                            <constraint firstItem="ttO-yf-Fhh" firstAttribute="leading" secondItem="MLB-V2-Vn5" secondAttribute="leading" constant="20" id="KMq-ez-JVe"/>
+                            <constraint firstItem="Fn8-QY-IWG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MLB-V2-Vn5" secondAttribute="leading" constant="20" symbolic="YES" id="OVI-Di-lg3"/>
+                            <constraint firstItem="waP-Qf-iP0" firstAttribute="leading" secondItem="MLB-V2-Vn5" secondAttribute="leading" constant="20" id="TF4-Tz-Qyn"/>
+                            <constraint firstItem="Fn8-QY-IWG" firstAttribute="top" secondItem="waP-Qf-iP0" secondAttribute="bottom" constant="8" id="UBZ-qV-wvc"/>
+                            <constraint firstItem="aPW-Gt-DUB" firstAttribute="leading" secondItem="MLB-V2-Vn5" secondAttribute="leading" constant="20" id="mCM-uH-5I3"/>
+                            <constraint firstAttribute="bottom" secondItem="Fn8-QY-IWG" secondAttribute="bottom" constant="20" id="pye-lb-WsT"/>
+                            <constraint firstAttribute="trailing" secondItem="aPW-Gt-DUB" secondAttribute="trailing" constant="20" id="w16-e1-JKA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="ttO-yf-Fhh" id="OD3-LS-M95"/>
+                        <outlet property="photoNameTextField" destination="aPW-Gt-DUB" id="02n-cR-Abd"/>
+                        <outlet property="photoNoteTextField" destination="waP-Qf-iP0" id="BmP-Yf-oeF"/>
+                    </connections>
+                </viewController>
+                <customObject id="LhY-Gu-Laf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3683" y="831"/>
         </scene>
         <!--Notes-->
         <scene sceneID="k1H-9E-zby">

@@ -69,4 +69,11 @@ class TripDetailsViewController: NSViewController {
         
         activitiesArrayController.remove(contentsOf: activitiesArrayController.selectedObjects)
     }
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "phtoSegue") {
+            let photosViewController = (segue.destinationController as! NSWindowController).contentViewController as! TripPhotosViewController
+            photosViewController.holiday = holiday
+        }
+    }
 }
