@@ -79,7 +79,7 @@ class TripPhotosViewController: NSViewController, NSCollectionViewDelegate, NSCo
         let managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let photo = NSEntityDescription.insertNewObject(forEntityName: "Photo", into: managedObjectContext) as! Photo
         
-        photo.photoData = photoImage?.tiffRepresentation as Data!
+        photo.photoData = photoImage?.tiffRepresentation
         photo.name = name
         photo.note = note
         

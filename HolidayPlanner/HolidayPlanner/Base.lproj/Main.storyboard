@@ -1371,7 +1371,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="ZO2-Ul-vr2" kind="modal" identifier="addPhotoSegue" id="tyN-pm-L1A"/>
+                                    <segue destination="ZO2-Ul-vr2" kind="popover" identifier="addPhotoSegue" popoverAnchorView="wiz-wW-rTd" popoverBehavior="semitransient" preferredEdge="maxY" id="tyN-pm-L1A"/>
                                 </connections>
                             </button>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqR-sD-7sz">
@@ -1380,11 +1380,11 @@
                                     <rect key="frame" x="1" y="1" width="589" height="333"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="Hct-mY-bZt">
+                                        <collectionView selectable="YES" id="Hct-mY-bZt">
                                             <rect key="frame" x="0.0" y="0.0" width="589" height="158"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="QZ0-ub-62W">
-                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="itemSize" width="200" height="200"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <connections>

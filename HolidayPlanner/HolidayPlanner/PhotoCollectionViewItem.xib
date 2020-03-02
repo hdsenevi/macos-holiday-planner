@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PK2-cU-xhu">
-                    <rect key="frame" x="12" y="41" width="240" height="209"/>
+                    <rect key="frame" x="5" y="34" width="254" height="223"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="YK5-LC-lPd"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A5m-BA-q17">
@@ -32,15 +32,16 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="PK2-cU-xhu" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="12" id="9Ec-1W-zaF"/>
+                <constraint firstItem="PK2-cU-xhu" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="5" id="9Ec-1W-zaF"/>
                 <constraint firstItem="A5m-BA-q17" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="AWJ-lP-F7L"/>
-                <constraint firstItem="A5m-BA-q17" firstAttribute="top" secondItem="PK2-cU-xhu" secondAttribute="bottom" constant="12" id="M1o-BM-xXK"/>
-                <constraint firstAttribute="trailing" secondItem="PK2-cU-xhu" secondAttribute="trailing" constant="12" id="Ss6-hg-xnz"/>
-                <constraint firstItem="PK2-cU-xhu" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="12" id="Wqd-nE-eFr"/>
+                <constraint firstItem="A5m-BA-q17" firstAttribute="top" secondItem="PK2-cU-xhu" secondAttribute="bottom" constant="5" id="M1o-BM-xXK"/>
+                <constraint firstAttribute="trailing" secondItem="PK2-cU-xhu" secondAttribute="trailing" constant="5" id="Ss6-hg-xnz"/>
+                <constraint firstItem="PK2-cU-xhu" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="5" id="Wqd-nE-eFr"/>
                 <constraint firstAttribute="trailing" secondItem="A5m-BA-q17" secondAttribute="trailing" constant="20" id="v0Q-jw-ySX"/>
                 <constraint firstAttribute="bottom" secondItem="A5m-BA-q17" secondAttribute="bottom" constant="12" id="vvy-bp-6cf"/>
             </constraints>
             <point key="canvasLocation" x="32" y="149"/>
         </customView>
+        <collectionViewItem id="CoD-Rj-4nm" customClass="PhotoCollectionViewItem" customModule="HolidayPlanner" customModuleProvider="target"/>
     </objects>
 </document>
