@@ -8,8 +8,7 @@
 
 import Cocoa
 
-class TripSplitViewController: NSSplitViewController {
-
+class TripSplitViewController: NSSplitViewController, TripListViewControllerDelegate {
     @IBOutlet var tripArrayController: NSArrayController!
     
     var managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -17,22 +16,13 @@ class TripSplitViewController: NSSplitViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        let listViewController = children[0] as! TripListViewController
+        listViewController.delegate = self
     }
     
-    func setInitialTrip() {
-        do {
-            tripArrayController.managedObjectContext = managedObjectContext
-            try tripArrayController.fetch(with: nil, merge: false)
-            
-            if (tripArrayController.selectedObjects != nil) {
-                let holiday = tripArrayController.selectedObjects[0] as! Holiday
-                let tabViewController = children[1] as! TripTabViewController
-                tabViewController.holiday = holiday
-            }
-        }
-        catch {
-            
-        }
+    // MARK: TripListViewControllerDelegate functions
+    func selectHoliday(holiday: Holiday?) {
+        let tabViewController = children[1] as! TripTabViewController
+        tabViewController.holiday = holiday
     }
-    
 }

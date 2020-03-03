@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B201A00240D2B21009E8152 /* HolidayGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2019FF240D2B21009E8152 /* HolidayGroup.swift */; };
 		8B4D011423FD5B7700FC0F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D011323FD5B7700FC0F69 /* AppDelegate.swift */; };
 		8B4D011623FD5B7700FC0F69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D011523FD5B7700FC0F69 /* ViewController.swift */; };
 		8B4D011923FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D011723FD5B7700FC0F69 /* HolidayPlanner.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B2019FF240D2B21009E8152 /* HolidayGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayGroup.swift; sourceTree = "<group>"; };
 		8B4D011023FD5B7700FC0F69 /* HolidayPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolidayPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B4D011323FD5B7700FC0F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B4D011523FD5B7700FC0F69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				8B875AE424045D09000E5798 /* TripPhotosViewController.swift */,
 				8B875AE624045FDB000E5798 /* PhotoCollectionViewItem.swift */,
 				8B875AEA24046B6C000E5798 /* AddPhotoViewController.swift */,
+				8B2019FF240D2B21009E8152 /* HolidayGroup.swift */,
 			);
 			path = HolidayPlanner;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				8B622C212402179A0045FBFD /* TripTabViewController.swift in Sources */,
 				8B4D011623FD5B7700FC0F69 /* ViewController.swift in Sources */,
 				8B875AE524045D09000E5798 /* TripPhotosViewController.swift in Sources */,
+				8B201A00240D2B21009E8152 /* HolidayGroup.swift in Sources */,
 				8B4D012723FD5C4200FC0F69 /* TripListViewController.swift in Sources */,
 				8B4D012D23FD5C9E00FC0F69 /* TripNoteViewController.swift in Sources */,
 				8B875AEB24046B6C000E5798 /* AddPhotoViewController.swift in Sources */,
