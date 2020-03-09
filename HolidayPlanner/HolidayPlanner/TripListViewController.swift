@@ -143,11 +143,21 @@ class TripListViewController: NSViewController, NSOutlineViewDelegate, NSOutline
     @IBAction func removeHoliday(_ sender: NSButton) {
         if let holiday = holidayOutlineView.item(atRow: holidayOutlineView.selectedRow) as? Holiday
         {
-            let managedObjectContect = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            let alert: NSAlert = NSAlert()
+            alert.messageText = "Are you sure you want to delete this holiday?"
+            alert.informativeText = "Deleted holidays cannot be restored."
+            alert.alertStyle = .informational
+            alert.addButton(withTitle: "OK")
+            alert.addButton(withTitle: "Cancel")
+            let confirmDelete = alert.runModal() == NSApplication.ModalResponse.alertFirstButtonReturn
             
-            managedObjectContect.delete(holiday)
-            refreshList()
-            selectFirstHoliday()
+            if confirmDelete {
+                let managedObjectContect = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+                
+                managedObjectContect.delete(holiday)
+                refreshList()
+                selectFirstHoliday()
+            }
         }
     }
     
