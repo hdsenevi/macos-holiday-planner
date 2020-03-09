@@ -689,6 +689,22 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="D00BA88C-1CA0-430A-BB74-2ADCBD6A9E01" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="K0n-IY-LWP">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="WS8-rK-Mdi"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="OXf-85-5Zd"/>
+                                <toolbarItem implicitItemIdentifier="5FC3F714-729D-4E8B-A00D-1102B1D08AB4" label="Add Holiday" paletteLabel="Add Holiday" tag="-1" image="NSAddTemplate" id="lG2-wo-JUY">
+                                    <size key="minSize" width="11" height="11"/>
+                                    <size key="maxSize" width="11" height="11"/>
+                                    <connections>
+                                        <action selector="addHoliday:" target="Oky-zY-oP4" id="IW5-u7-0d5"/>
+                                    </connections>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="lG2-wo-JUY"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -818,24 +834,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mF8-IL-eJe">
-                                <rect key="frame" x="340" y="13" width="49" height="32"/>
-                                <buttonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Csr-BI-ucr">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="addHoliday:" target="K5I-h1-QIh" id="CWs-yP-HT9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ajI-ZP-rbv" secondAttribute="bottom" constant="20" id="2AP-9a-bj9"/>
-                            <constraint firstAttribute="bottom" secondItem="mF8-IL-eJe" secondAttribute="bottom" constant="20" id="5Bk-It-mhp"/>
                             <constraint firstItem="ajI-ZP-rbv" firstAttribute="top" secondItem="hlc-KN-beJ" secondAttribute="bottom" constant="20" id="Jrl-gJ-AX4"/>
                             <constraint firstAttribute="trailing" secondItem="hlc-KN-beJ" secondAttribute="trailing" constant="20" id="jti-xJ-wU2"/>
                             <constraint firstItem="hlc-KN-beJ" firstAttribute="leading" secondItem="IFU-Qv-8u7" secondAttribute="leading" constant="20" id="kJB-Uh-wXC"/>
-                            <constraint firstItem="ajI-ZP-rbv" firstAttribute="leading" secondItem="mF8-IL-eJe" secondAttribute="trailing" constant="12" id="pfJ-m5-qOi"/>
                             <constraint firstAttribute="trailing" secondItem="ajI-ZP-rbv" secondAttribute="trailing" constant="20" id="r2U-hr-Dho"/>
                             <constraint firstItem="hlc-KN-beJ" firstAttribute="top" secondItem="IFU-Qv-8u7" secondAttribute="top" constant="20" id="ynG-MP-yfS"/>
                         </constraints>
@@ -1649,4 +1653,7 @@
             <point key="canvasLocation" x="1428" y="1238"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>
