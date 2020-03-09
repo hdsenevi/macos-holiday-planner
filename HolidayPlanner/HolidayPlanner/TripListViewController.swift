@@ -125,7 +125,7 @@ class TripListViewController: NSViewController, NSOutlineViewDelegate, NSOutline
         delegate?.selectHoliday(holiday: holiday)
     }
     
-    @IBAction func addHoliday(_ sender: NSButton) {
+    @IBAction func addHoliday(_ sender: Any) {
         let managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let holiday = NSEntityDescription.insertNewObject(forEntityName: "Holiday", into: managedObjectContext) as! Holiday

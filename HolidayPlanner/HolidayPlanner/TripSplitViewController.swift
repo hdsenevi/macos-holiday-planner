@@ -20,6 +20,12 @@ class TripSplitViewController: NSSplitViewController, TripListViewControllerDele
         listViewController.delegate = self
     }
     
+    @IBAction func addHoliday(_ sender: Any)
+    {
+        let listViewController = children[0] as! TripListViewController
+        listViewController.addHoliday(self)
+    }
+    
     // MARK: TripListViewControllerDelegate functions
     func selectHoliday(holiday: Holiday?) {
         let tabViewController = children[1] as! TripTabViewController
