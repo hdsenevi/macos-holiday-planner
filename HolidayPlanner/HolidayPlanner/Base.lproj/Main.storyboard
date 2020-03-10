@@ -1125,6 +1125,13 @@
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="F0K-J5-cOJ" viewBased="YES" id="hjO-4v-Bqc">
                                             <rect key="frame" x="0.0" y="0.0" width="619" height="183"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <gestureRecognizers>
+                                                <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="2" id="bvc-mf-A5n">
+                                                    <connections>
+                                                        <action selector="activitiesTableDoubleClick:" target="BL0-ZQ-GAV" id="miV-Cn-xRT"/>
+                                                    </connections>
+                                                </clickGestureRecognizer>
+                                            </gestureRecognizers>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>

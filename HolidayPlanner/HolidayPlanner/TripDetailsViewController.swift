@@ -54,7 +54,11 @@ class TripDetailsViewController: NSViewController {
         self.totalTimeLabel.stringValue = self.deteComponentsFormatter.string(from: tripTime)!
     }
     
-    @IBAction func addActivity(_ sender: NSButton) {
+    @IBAction func activitiesTableDoubleClick(_ sender: Any) {
+        addActivity(sender)
+    }
+    
+    @IBAction func addActivity(_ sender: Any) {
         let managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let activity = NSEntityDescription.insertNewObject(forEntityName: "Activity", into: managedObjectContext) as! Activity
         activity.holiday = holiday
