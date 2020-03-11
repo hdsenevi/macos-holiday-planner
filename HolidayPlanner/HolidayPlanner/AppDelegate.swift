@@ -115,6 +115,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // If we got here, it is time to quit.
         return .terminateNow
     }
+    
+    lazy var preferencesWindowController: NSWindowController? = {
+        let storyboard: NSStoryboard? = NSStoryboard(name: "Main", bundle: nil)
+        var windowController = storyboard?.instantiateController(withIdentifier: "PreferencesWindowController") as! NSWindowController
+        return windowController
+    }()
 
+    @IBAction func showPreferences(_ sender: Any) {
+        preferencesWindowController?.showWindow(sender)
+    }
 }
 

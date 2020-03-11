@@ -32,7 +32,35 @@ class TripListViewController: NSViewController, NSOutlineViewDelegate, NSOutline
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
+        let defaults = ["autoArchive": NSNumber(value: false)]
+        UserDefaults.standard.register(defaults: defaults)
+        
+        let autoArchived = (UserDefaults.standard.value(forKey: "autoArchive") as! NSNumber).boolValue
+        
+        if autoArchived {
+            autoArchiveHolidays()
+        }
+        
         loadHolidays()
+    }
+    
+    func autoArchiveHolidays() {
+        do {
+            let managedObjectContext = (NSApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            // Confirm there is atleast one holiday
+            let holidayFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Holiday")
+            holidayFetchRequest.predicate = NSPredicate(format: "archived == false && endDate < %@", NSDate())
+            
+            let holidaysToArchive = try managedObjectContext.fetch(holidayFetchRequest) as! [Holiday]
+            
+            for trip in holidaysToArchive {
+                trip.archived = true
+            }
+        }
+        catch {
+            // Problem fetching data
+        }
     }
     
     func loadHolidays() {

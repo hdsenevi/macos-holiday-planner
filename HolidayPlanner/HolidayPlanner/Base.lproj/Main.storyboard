@@ -5,6 +5,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Window Controller-->
+        <scene sceneID="pig-CE-0dj">
+            <objects>
+                <windowController storyboardIdentifier="PreferencesWindowController" id="vtp-Tu-VdF" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="11E-gA-6Ny">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="245" y="301" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="vtp-Tu-VdF" id="oqC-Yt-j3c"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="9aY-OM-Geq" kind="relationship" relationship="window.shadowedContentViewController" id="3HL-Yk-vzL"/>
+                    </connections>
+                </windowController>
+                <customObject id="O8P-XC-nNG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="-329"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TgC-8f-EF7">
+            <objects>
+                <viewController id="9aY-OM-Geq" sceneMemberID="viewController">
+                    <view key="view" id="e1S-Ac-HwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QZ1-h6-hsM">
+                                <rect key="frame" x="48" y="126" width="151" height="18"/>
+                                <buttonCell key="cell" type="check" title="Auto archive holidays" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="QyH-YS-TgG">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="2IW-ff-rGf" name="value" keyPath="values.autoArchive" id="FNp-CZ-xJX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QZ1-h6-hsM" secondAttribute="trailing" constant="283" id="8JD-U6-j4I"/>
+                            <constraint firstItem="QZ1-h6-hsM" firstAttribute="centerY" secondItem="e1S-Ac-HwQ" secondAttribute="centerY" id="bWB-v8-v6E"/>
+                            <constraint firstItem="QZ1-h6-hsM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e1S-Ac-HwQ" secondAttribute="leading" constant="20" symbolic="YES" id="mCI-VO-NKB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="oox-Wc-OGW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="2IW-ff-rGf"/>
+            </objects>
+            <point key="canvasLocation" x="766" y="-354"/>
+        </scene>
         <!--Application-->
         <scene sceneID="JPo-4y-FX3">
             <objects>
@@ -22,7 +74,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <action selector="showPreferences:" target="Ady-hI-5gd" id="e4u-FD-xrZ"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
